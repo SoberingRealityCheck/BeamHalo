@@ -1,0 +1,370 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Nov  6 17:05:45 2026
+# Process ID         : 3079772
+# Current directory  : /home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1
+# Command line       : vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : /home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/top.vds
+# Journal file       : /home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/vivado.jou
+# Running On         : localhost.localdomain
+# Platform           : unknown
+# Operating System   : unknown
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 265
+# CPU Frequency      : 1816.666 MHz
+# CPU Physical cores : 20
+# CPU Logical cores  : 20
+# Host memory        : 32801 MB
+# Swap memory        : 16605 MB
+# Total Virtual      : 49406 MB
+# Available Virtual  : 41340 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7k325tffg900-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3079792
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2393.371 ; gain = 417.742 ; free physical = 15861 ; free virtual = 38078
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'sysclk100', assumed default net type 'wire' [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/v/top.v:42]
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/v/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/home/clay/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75840]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [/home/clay/tools/Xilinx/Vivado/2024.2/scripts/rt/data/unisim_comp.v:75840]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/.Xil/Vivado-3079772-localhost.localdomain/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/.Xil/Vivado-3079772-localhost.localdomain/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/.Xil/Vivado-3079772-localhost.localdomain/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (0#1) [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/.Xil/Vivado-3079772-localhost.localdomain/realtime/vio_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/v/top.v:65]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/.Xil/Vivado-3079772-localhost.localdomain/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/.Xil/Vivado-3079772-localhost.localdomain/realtime/ila_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/v/top.v:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/v/top.v:59]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_instance'. This will prevent further optimization [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/v/top.v:65]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2470.309 ; gain = 494.680 ; free physical = 15773 ; free virtual = 37991
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2482.184 ; gain = 506.555 ; free physical = 15765 ; free virtual = 37983
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2482.184 ; gain = 506.555 ; free physical = 15765 ; free virtual = 37983
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2485.152 ; gain = 0.000 ; free physical = 15761 ; free virtual = 37979
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clock_instance'
+Finished Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clock_instance'
+Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila_instance'
+Finished Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.gen/sources_1/ip/ila_0/ila_0/ila_0_in_context.xdc] for cell 'ila_instance'
+Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'your_instance_name'
+Finished Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'your_instance_name'
+Parsing XDC File [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SFP_TX_DISABLE'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'SFP_TX_DISABLE'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'USER_SMA_GPIO_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'USER_SMA_GPIO_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'USER_SMA_GPIO_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'USER_SMA_GPIO_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_SDWP'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_SDWP'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_SDDET'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_SDDET'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_CMD_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_CMD_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_CLK_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_CLK_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_DAT2_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_DAT2_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_DAT1_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_DAT1_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_DAT0_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_DAT0_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_CD_DAT3_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'SDIO_CD_DAT3_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA12_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA12_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA12_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA12_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA13_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA13_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA13_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA13_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA16_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA16_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA16_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA16_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA15_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA15_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA15_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA15_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA14_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA14_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA14_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA14_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA01_CC_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA01_CC_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA01_CC_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA01_CC_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA00_CC_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA00_CC_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA00_CC_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA00_CC_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK0_M2C_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK0_M2C_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK0_M2C_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_CLK0_M2C_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'SI5326_INT_ALM_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'SI5326_INT_ALM_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_INT'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'HDMI_INT'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA10_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA10_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA10_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA10_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA11_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA11_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA11_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA11_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA09_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA09_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA09_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA09_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA07_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA07_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA07_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA07_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA02_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA02_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA02_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA02_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA05_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA05_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA05_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA05_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:82]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA08_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA08_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA08_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA08_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA03_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA04_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA06_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:95]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA06_P'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA06_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'FMC_LPC_LA06_N'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'SI5326_RST_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'SI5326_RST_LS'. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:100]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc:100]
+Finished Parsing XDC File [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/clay/Documents/kc705-ucf-xdc-rdf0150-rev1-0/KC705_Rev1_0_U1.ucf.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.srcs/constrs_1/new/ourconstraints.xdc]
+Finished Parsing XDC File [/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.srcs/constrs_1/new/ourconstraints.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2569.957 ; gain = 0.000 ; free physical = 15749 ; free virtual = 37967
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2569.957 ; gain = 0.000 ; free physical = 15749 ; free virtual = 37967
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'ila_instance' at clock pin 'clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'your_instance_name' at clock pin 'clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2569.957 ; gain = 594.328 ; free physical = 15747 ; free virtual = 37965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2577.961 ; gain = 602.332 ; free physical = 15747 ; free virtual = 37965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for clock_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for ila_instance. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for your_instance_name. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2577.961 ; gain = 602.332 ; free physical = 15747 ; free virtual = 37965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2577.961 ; gain = 602.332 ; free physical = 15745 ; free virtual = 37964
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   30 Bit       Adders := 1     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2577.961 ; gain = 602.332 ; free physical = 15734 ; free virtual = 37958
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2640.961 ; gain = 665.332 ; free physical = 15663 ; free virtual = 37886
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2659.992 ; gain = 684.363 ; free physical = 15647 ; free virtual = 37871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2659.992 ; gain = 684.363 ; free physical = 15647 ; free virtual = 37870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
+|2     |vio_0         |         1|
+|3     |ila_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_wiz |     1|
+|2     |ila     |     1|
+|3     |vio     |     1|
+|4     |CARRY4  |     8|
+|5     |LUT1    |     1|
+|6     |LUT3    |     2|
+|7     |LUT5    |     4|
+|8     |LUT6    |     1|
+|9     |FDRE    |    31|
+|10    |IBUFDS  |     1|
+|11    |OBUF    |     1|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.805 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2812.805 ; gain = 749.402 ; free physical = 15505 ; free virtual = 37731
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2812.812 ; gain = 837.176 ; free physical = 15505 ; free virtual = 37731
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2812.812 ; gain = 0.000 ; free physical = 15505 ; free virtual = 37731
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2812.812 ; gain = 0.000 ; free physical = 15667 ; free virtual = 37893
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: aea5553d
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2812.812 ; gain = 1078.270 ; free physical = 15667 ; free virtual = 37893
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1819.882; main = 1819.882; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2812.809; main = 2812.809; forked = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2836.816 ; gain = 0.000 ; free physical = 15667 ; free virtual = 37892
+INFO: [Common 17-1381] The checkpoint '/home/clay/tools/Xilinx/Vivado/2024.2/beamhalo/fpga/beamhalo/beamhalo.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  6 17:06:01 2026...
