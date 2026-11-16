@@ -43,21 +43,8 @@ module SectorProcessor(
     );
     
     
-    
-    
     // some logic that basically just says "is there tracks present? if so, return a bit"
-    always @(posedge clk) begin
-        case (beamhalo_tracks)
-            // this is a placeholder bc idk how big the actual data size will be.
-            // right now i just made it an arbitrary 8 bits. but it's probably like orders of magnitude more than that
-            // but basically: is the track data non-zero? do we have tracks?
-            
-            8'b0    : beamhalo_tag <= 1'b0;         // if there's no tracks, our beam halo tag should be zero
-            
-            default : beamhalo_tag <= 1'b1;         // otherwise, we have tracks, turn the tag on
-        
-        endcase 
-    end
+    assign beamhalo_tag = |beamhalo_tracks;
     
     // test 2!
     
