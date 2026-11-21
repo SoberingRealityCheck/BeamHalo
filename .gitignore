@@ -1,0 +1,32 @@
+# Vivado generated folders. Vivado rebuilds all of these.
+# We keep the .xpr and the .srcs folder (sources, .xci, constraints).
+fpga/*/*.cache/
+fpga/*/*.gen/
+fpga/*/*.hw/
+fpga/*/*.ip_user_files/
+fpga/*/*.runs/
+fpga/*/*.sim/
+.Xil/
+
+# Vivado logs, journals, dumps
+*.jou
+*.log
+*.str
+*.backup.jou
+*.backup.log
+hs_err_pid*
+webtalk*
+
+# Waveforms + ILA captures. Export CSVs to data/ if you want to keep one.
+*.wdb
+*.ila
+*.ltx
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# mac
+.DS_Store
