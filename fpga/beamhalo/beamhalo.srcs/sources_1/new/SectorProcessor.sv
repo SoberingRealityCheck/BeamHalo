@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: Rice University
+// Engineer: Clay Goldsmith
 // 
 // Create Date: 11/06/2026 05:16:35 PM
 // Design Name: 
 // Module Name: SectorProcessor
-// Project Name: 
+// Project Name: EMTF Beam Halo Tagger
 // Target Devices: 
 // Tool Versions: 
 // Description: 
@@ -49,3 +49,6 @@ module SectorProcessor(
     // test 2!
     
 endmodule
+
+
+// will we want a module to fake upstream data & send it in? does that belong in its own test bench file? TODO

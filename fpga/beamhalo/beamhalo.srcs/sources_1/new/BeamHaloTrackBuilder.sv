@@ -115,8 +115,24 @@ module PatternMatchingLayer (
     // steps probably look like: 
 
     // 1. construct every possible road that matches our target using our preset parameters
+
+        // probably want like a BeamHaloRoadChecker Module that gets passed in some initial phase value
+        // so we can construct a parallel array of them with all our possible initial values
+
+        // that gets fed in our segment bitstream.
+
+        // do we want this to simply return true if its road is valid?
+        // or do we want it to return like, its road data (initial phase value)?
+        // or do we want it to return the specific segments that made it a valid road as well? 
+
+        // true is probably simplest but then requires: 1. us to have some way to know what road has been found
+                                                    //  2. some follow-up step to identify matching segments
+
     // 2. pass our segments through this giant array of possible road combinators 
     //    and generate a list of all possible road matches
+
+
+
     // 3. format & return big list of roads to the sorting layer
 
     // note. i'd like to also consider the fact that they're moving "backwards in time".
