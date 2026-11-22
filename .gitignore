@@ -30,3 +30,11 @@ __pycache__/
 
 # mac
 .DS_Store
+
+# stale incremental synth checkpoint (Vivado remakes it)
+fpga/*/*.srcs/utils_1/
+
+# verilator build + run output
+verilator/obj/
+verilator/run/
+verilator/build.log
