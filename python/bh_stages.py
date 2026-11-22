@@ -97,3 +97,41 @@ def stage0_by_event(segs, events):
         if all(sorted(by_bx.get(e + offset, [])) == want[e] for e in range(len(events))):
             return {e: by_bx.get(e + offset, []) for e in range(len(events))}
     return {e: by_bx.get(e, []) for e in range(len(events))}   # no clean match. best effort. compare_bh.py will say so
+
+
+def check_tracks(tracks, tags, model_roads, n_events, max_lag=16):
+    """checks stage4 (best tracks) and stage5 (tag) against the model's per-column road qualities.
+    the model has no sorting, so it only predicts the best road: its quality, and which columns share it.
+    the tag should be 1 exactly when some column has quality > 0.
+    returns a dict, or None if the run has no stage4/5 data"""
+    if not tracks and not any(t for _, t in tags):
+        return None
+    best_q = {e: max(model_roads.get(e, {}).values(), default=0) for e in range(n_events)}
+    best_cols = {e: sorted(c for c, q in model_roads.get(e, {}).items() if q == best_q[e]) for e in range(n_events)}
+    tag_by_bx = dict(tags)
+    n_bx = max(tag_by_bx) + 1 if tag_by_bx else 0
+    # lag = how many bx the output trails the input. pick the one where the tag matches best
+    best = None
+    for lag in range(max_lag):
+        score = sum(1 for b in range(n_bx) if tag_by_bx.get(b, 0) == int(best_q.get(b - lag, 0) > 0))
+        if best is None or score > best[1]:
+            best = (lag, score)
+    lag, tag_score = best
+    # the top track per bx = the one with the highest quality (track 0 should be it)
+    top = {}
+    for bx, trk, patt, qual, col, zone in tracks:
+        if bx not in top or qual > top[bx][0]:
+            top[bx] = (qual, col)
+    q_ok, col_ok, col_leftmost, bad = 0, 0, 0, []
+    for e in range(n_events):
+        b = e + lag
+        got_q, got_col = top.get(b, (0, None))
+        if got_q == best_q[e]:
+            q_ok += 1
+            if best_q[e]:
+                col_ok += got_col in best_cols[e]
+                col_leftmost += got_col == best_cols[e][0]
+        else:
+            bad.append((e, got_q, best_q[e]))
+    return dict(lag=lag, tag_score=tag_score, n_bx=n_bx, q_ok=q_ok, col_ok=col_ok, col_leftmost=col_leftmost,
+                n_with_road=sum(1 for e in range(n_events) if best_q[e]), bad=bad)

@@ -6,6 +6,8 @@
 # stage0: do the segments the DUT sees match the hit file?
 # stage1: is the hitmap the DUT built the hitmap the model built?
 # stage2: are the per-column road qualities the same? (bh_stages.align_stage2 explains the alignment search)
+# stage4/5: does the best track have the model's best quality, and is the tag high exactly when a road exists?
+#   only checked when the run has stage4/5 data (the verilator run stubs those stages)
 
 import sys
 from bh_model import read_events
@@ -49,3 +51,17 @@ for e in range(n_events):
     if a != b:
         diff = sorted(c for c in set(a) | set(b) if a.get(c) != b.get(c))
         print(f"    event {e}: {len(diff)} columns differ, e.g. col {diff[0]} dut={a.get(diff[0])} model={b.get(diff[0])}")
+
+# ---------------- stage 4 + 5 ----------------
+r = check_tracks(load_stage4(rtl), load_stage5(rtl), model_roads, n_events)
+if r is None:
+    print("stage4/5 tracks : skipped (no tracks or tag in this run)")
+else:
+    ok = r["tag_score"] == r["n_bx"] and r["q_ok"] == n_events and r["col_ok"] == r["n_with_road"]
+    print(f"stage5 tag      : {'OK' if r['tag_score'] == r['n_bx'] else 'MISMATCH'}  "
+          f"({r['tag_score']}/{r['n_bx']} bx match, output trails the input by {r['lag']} bx)")
+    print(f"stage4 tracks   : {'OK' if r['q_ok'] == n_events and r['col_ok'] == r['n_with_road'] else 'MISMATCH'}  "
+          f"(best quality right for {r['q_ok']}/{n_events} events, column among the model's best for "
+          f"{r['col_ok']}/{r['n_with_road']}, leftmost of them for {r['col_leftmost']})")
+    for e, got, want in r["bad"][:8]:
+        print(f"    event {e}: best track quality {got}, model says {want}")
