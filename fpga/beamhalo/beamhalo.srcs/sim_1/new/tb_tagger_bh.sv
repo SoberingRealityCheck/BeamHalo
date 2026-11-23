@@ -94,7 +94,7 @@ module tb_tagger_bh();
     
     // ********************** Read Events from File at beginning ***************************** //
     localparam n_evts = 20;
-    localparam n_hits = 30;
+    localparam n_hits = 64;    // was 30. raised so the noisier test events fit. the reader stops at each 12345 anyway
     localparam n_data_per_hit = 14;
     int hits[n_evts][n_hits][n_data_per_hit] = '{default: '0};
     

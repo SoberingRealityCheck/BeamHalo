@@ -44,6 +44,9 @@ module tagger_bh (
     // clocks
     input  clk40, clk360;
 
+    // a track tags the event if its road quality is at least this. same cut as the beam halo study (quality 10 or more)
+    localparam trk_qual_t tag_min_qual = 10;
+
     // storing our tracks in case we need them
     best_trk_t best_tracks[num_tracks];
 
@@ -60,6 +63,6 @@ module tagger_bh (
     always_comb begin
         beamhalo_tag_o = 1'b0;
         for (int t = 0; t < num_tracks; t++)
-            if (best_tracks[t].qual != 0) beamhalo_tag_o = 1'b1;
+            if (best_tracks[t].qual >= tag_min_qual) beamhalo_tag_o = 1'b1;
     end
 endmodule

@@ -6,7 +6,7 @@
 localparam num_zones_bh    = 1;
 localparam num_patterns_bh = 1;
 
-// pattern row i covers hitmap columns start..stop around a center of 55 (same units as his tables).
+// pattern row i covers hitmap columns start..stop around a center of 55 (same units as the emulator's tables).
 // centers (not used by the matcher, only by track building): [55, 55, 55, 55, 55, 55, 55, 55]
 localparam [31:0] col_start_table_bh[num_zones_filled][num_patterns_filled][num_hitmap_rows] = '{
 	// Zone 0
